@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/RAVAN0407/EaseFlow/common"
+	"github.com/RAVAN0407/EaseFlow/routers"
 
 	log "github.com/sirupsen/logrus"
 
@@ -19,5 +20,6 @@ func main() {
 	r.GET("/hello", func(c *gin.Context) {
 		c.JSON(200, gin.H{"success": "hello"})
 	})
+	routers.AuthRoutes()
 	r.Run(common.GetAddress())
 }
