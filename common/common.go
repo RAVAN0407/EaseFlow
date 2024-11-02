@@ -4,7 +4,7 @@ import (
 	"net/mail"
 	"os"
 
-	"github.com/influxdata/influxdb1-client/models"
+	"github.com/RAVAN0407/EaseFlow/models"
 )
 
 func GetAddress() string {
@@ -16,14 +16,14 @@ func GetAddress() string {
 }
 
 func ValidateUser(user models.User) bool {
-	if user.Username == "" {
+	if user.UserName == "" {
 		return true
 	}
 	_, err := mail.ParseAddress(user.Email)
 	if err != nil {
 		return true
 	}
-	if user.Phone == "" {
+	if user.Password == "" {
 		return true
 	}
 	return false

@@ -20,6 +20,6 @@ func main() {
 	r.GET("/hello", func(c *gin.Context) {
 		c.JSON(200, gin.H{"success": "hello"})
 	})
-	routers.AuthRoutes()
+	routers.AuthRoutes(r)
 	r.Run(common.GetAddress())
 }

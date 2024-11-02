@@ -7,5 +7,5 @@ import (
 
 func AuthRoutes(r *gin.Engine) {
 	// r.GET("/login", controllers.Login)
-	r.GET("/signup", controllers.SingUp)
+	r.GET("/signup", controllers.SingUp())
 }

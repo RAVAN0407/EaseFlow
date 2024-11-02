@@ -8,7 +8,7 @@ import (
 
 const USER = "user"
 
-type UserInfo struct {
+type User struct {
 	ID        uuid.UUID `json:"id"`
 	UserName  string    `json:"username"`
 	Email     string    `json:"email"`
