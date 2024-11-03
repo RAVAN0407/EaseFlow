@@ -9,3 +9,9 @@ func AuthRoutes(r *gin.Engine) {
 	r.GET("/login", controllers.Login())
 	r.GET("/signup", controllers.SingUp())
 }
+
+func TaskRoutes(r *gin.Engine) {
+	r.GET("/task/create", controllers.CreateTask())
+	r.GET("/task/update/", controllers.UpdateTask())
+	r.GET("/task/view-all/:UserID", controllers.ViewTasks())
+}

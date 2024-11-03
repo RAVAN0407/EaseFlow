@@ -8,7 +8,7 @@ import (
 
 const TASKS = "tasks"
 
-type tasks struct {
+type Tasks struct {
 	TaskID    uuid.UUID `json:"taskid"`
 	UserID    uuid.UUID `json:"userid"`
 	Task      string    `json:"task"`
