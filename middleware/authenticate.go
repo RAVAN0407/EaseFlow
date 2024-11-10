@@ -1,0 +1,5 @@
+package authenticate
+
+func Authenticate() {
+
+}
