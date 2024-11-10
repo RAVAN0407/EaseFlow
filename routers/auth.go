@@ -12,6 +12,7 @@ func AuthRoutes(r *gin.Engine) {
 
 func TaskRoutes(r *gin.Engine) {
 	r.GET("/task/create", controllers.CreateTask())
-	r.GET("/task/update/", controllers.UpdateTask())
-	r.GET("/task/view-all/:UserID", controllers.ViewTasks())
+	r.GET("/task/update", controllers.UpdateTask())
+	r.GET("/task/delete/:taskID", controllers.DeleteTask())
+	r.GET("/task/view-all/:UserID", controllers.GetAllTasks())
 }
